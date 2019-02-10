@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="bird2" size="1.000000 1.263505" />
+    <ImageTarget name="bird1" size="1.000000 1.207809" />
+    <ImageTarget name="whale2" size="1.000000 1.198089" />
+    <ImageTarget name="whale1" size="1.000000 1.411538" />
+    <ImageTarget name="lizard2" size="1.000000 1.618000" />
+    <ImageTarget name="lizard1" size="1.000000 1.532755" />
+    <ImageTarget name="husky2" size="1.000000 2.011173" />
+    <ImageTarget name="husky1" size="1.000000 2.162162" />
+    <ImageTarget name="gwcat2" size="1.000000 1.615087" />
+    <ImageTarget name="gwcat1" size="1.000000 1.646943" />
+    <ImageTarget name="corgibrown2" size="1.000000 2.098976" />
+    <ImageTarget name="gcat2" size="1.000000 2.130177" />
+    <ImageTarget name="gcat1" size="1.000000 1.736715" />
+    <ImageTarget name="corgiwhite2" size="1.000000 2.337662" />
+    <ImageTarget name="corgiwhite1" size="1.000000 2.457338" />
+    <ImageTarget name="corgibrown1" size="1.000000 1.852410" />
+    <ImageTarget name="Butterfly2" size="1.000000 1.758547" />
+    <ImageTarget name="Butterfly1" size="1.000000 1.757479" />
+    <ImageTarget name="blackcat2" size="1.000000 1.403084" />
+    <ImageTarget name="blackcat1" size="1.000000 1.454338" />
+  </Tracking>
+</QCARConfig>
