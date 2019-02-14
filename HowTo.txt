@@ -1,7 +1,7 @@
 # MR-Memory
 
 Hier ist das MR-Memory Projekt runterzuladen, 
-wir haben die App sowohl als fullscreen- und cardboard Datei hier hochgeladen, funktioniert auf Android 7.0 - 8.1 
+wir haben die App sowohl als fullscreen- und cardboard Datei hier hochgeladen (funktioniert auf Android 7.0 - 8.1).
 Desweiteren haben wir das Überschreiben des DefaultEventHandles auf anderen Unity Versionen gelöst,
 näheres dazu in der Dokumentation.
 
