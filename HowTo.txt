@@ -1,0 +1,19 @@
+# MR-Memory
+
+Hier ist das MR-Memory Projekt runterzuladen, 
+wir haben die App sowohl als fullscreen- und cardboard Datei hier hochgeladen, funktioniert auf Android 7.0 - 8.1 
+Desweiteren haben wir das Überschreiben des DefaultEventHandles auf anderen Unity Versionen gelöst,
+näheres dazu in der Dokumentation.
+
+Also einfach runterladen und in Unity öffnen, wir haben soweit auch alles an Assets, die nicht gebraucht werden entfernt
+und das Projekt so erheblich schlanker und hoffentlich übersichtlicher gemacht.
+
+- Die Geräuscheffekte sind unter Assets-> Resources-> Sounds zu finden,
+- Die Skripte, Foundpair.cs und PlaySound.cs sind direkt im Assets Ordner.
+- Karten haben wir Ihnen ja mitgegeben und damit kann es dann auch losgehen! 
+
+Wir wünschen Ihnen viel Freude.
+
+Mit freundlichen Grüßen
+
+Cem & Nikita
