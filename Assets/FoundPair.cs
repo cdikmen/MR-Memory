@@ -23,7 +23,6 @@ public class FoundPair : MonoBehaviour
     public float Timer1;
     public float FinishTimer = 0f;
     public bool needTimer = false;
-    public ParticleSystem WinningParticle;
     public TextMesh WinningText;
     public AudioSource WinningSound;
     public AudioClip WinningClip;
@@ -35,16 +34,19 @@ public class FoundPair : MonoBehaviour
 
     void Start()
     {
-        //currentAudio = GameObject.Find("currentAudio").GetComponent<AudioSource>();
-        //rightAudio = GameObject.Find("rightAudio").GetComponent<AudioSource>();
+        
 
     }
+    
+    // TODO: FIND IMAGE
 
     public void FoundImage()
     {
         needTimer = false;
         Timer1 = 0f;
     }
+
+    // TODO: LOST IMAGE TIMER
 
     public void LostImage()
     {
@@ -53,6 +55,8 @@ public class FoundPair : MonoBehaviour
         needTimer = true;
         Timer1 = 0f;
     }
+
+    // RESET all
 
     public void Reset()
     {
@@ -63,6 +67,8 @@ public class FoundPair : MonoBehaviour
         MatchFound = false;
     }
 
+    // Timer for LostImage
+    
     public void Timer()
     {
         if(Timer1 > 5f)
@@ -73,33 +79,32 @@ public class FoundPair : MonoBehaviour
         }
     }
 
+    // TODO: FinishTimer
+
     public void F_finishTimer()
     {
         if (FinishTimer > 3f)
         {
             WinningSound.Stop();
-            //WinningParticle.Stop();
             FinishTimer = 0f;
             WinningText.GetComponentInChildren<Renderer>().enabled = false;
-            //WinningParticle.GetComponentInChildren<Renderer>().enabled = false;
             Winning = false;
         }
     }
 
+    // WIN!
+
     public void F_Winning()
     {
-        //gibiihnwin
-        //WinningSound.PlayOneShot(WinningClip);
+        //GO GO WIN!
         MatchFound = true;
         Debug.Log("Yeahaaa we got a match!");
-        //Debug.Log(WinningSound);
-        //WinningParticle.Play();
         WinningText.GetComponentInChildren<Renderer>().enabled = true;
-        //WinningParticle.GetComponentInChildren<Renderer>().enabled = true;
         Winning = true;
 
     }
-
+    
+    //TODO: Winning Sound
     public void S_Winning()
     {
            
@@ -110,21 +115,10 @@ public class FoundPair : MonoBehaviour
             bPlayingWinningSound = true;
         }
         
-
-        /*if (!bPlayingWinningSound == true && SoundTimer > 5)
-        {
-            WinningSound.PlayOneShot(WinningClip);
-            Debug.Log(WinningSound);
-            bPlayingWinningSound = true;
-            SoundTimer += Time.deltaTime;
-            if(SoundTimer == 5)
-            {
-                bPlayingWinningSound = false;
-            }
-        }*/
-        
     }
-
+    
+    // TODO: if pictures are found, set win, if lost, have a timer to find back the image or 2nd image to get to win.
+    
     void Update()
     {
         if (bPlayingWinningSound)
@@ -162,6 +156,9 @@ public class FoundPair : MonoBehaviour
         Debug.Log("List of trackables currently active (tracked): ");
         foreach (TrackableBehaviour tb in activeTrackables)
         {
+        
+            // REgex IsMatch if image found with 1 set it to target 1 or 2 set to target2
+            
             if (Regex.IsMatch(tb.TrackableName, "1", RegexOptions.IgnoreCase))
             {
                 target1 = tb.TrackableName;
@@ -170,11 +167,15 @@ public class FoundPair : MonoBehaviour
             {
                 target2 = tb.TrackableName;
             }
+            
+            // put target1 to temppart1 or target2 to temppart 2 and delete the 1 and 2 in name.
 
             if (target1 != null && target2 != null)
             {
                 tempPart1 = Regex.Replace(target1, "1", "");
                 tempPart2 = Regex.Replace(target2, "2", "");
+
+                // check if names are same then win
 
                 if (tempPart1 == tempPart2)
                 {
